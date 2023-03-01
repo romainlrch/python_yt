@@ -6,9 +6,9 @@ from pytube import YouTube
 url = input("Lien de la vidéo : \n")
 my_video = YouTube(url)
 
-# print("*********************Video Title************************")
-# #get Video Title
-# print(my_video.title)
+print("*********************Video Title************************")
+#get Video Title
+print(my_video.title)
 
 # print("********************Download video*************************")
 # #get all the stream resolution for the 
