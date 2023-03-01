@@ -1,22 +1,21 @@
 #pip install pytube
 
-#import the package
 from pytube import YouTube
 
-url = input("Lien de la vidéo : \n")
-my_video = YouTube(url)
+nb_tours = int(input("Combien de tours de boucle voulez-vous ? "))
+liste_url = []
+num_url = 1
 
-print("*********************Video Title************************")
-#get Video Title
-print(my_video.title)
+for i in range(nb_tours):
+    url = input("Entrez l'URL n°{} : ".format(num_url))
+    liste_url.append(url)
+    num_url = num_url + 1
 
-# print("********************Download video*************************")
-# #get all the stream resolution for the 
-# for stream in my_video.streams:
-#     print(stream)
+for url in liste_url:
+    print(url)
+    my_video = YouTube(url)
 
-#set stream resolution
-my_video = my_video.streams.get_highest_resolution()
-
-#Download video
-my_video.download()
+    print("----- Video Title -----")
+    print(my_video.title)
+    my_video = my_video.streams.get_highest_resolution()
+    my_video.download()
