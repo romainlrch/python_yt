@@ -2,12 +2,12 @@
 
 from pytube import YouTube
 
-nb_tours = int(input("Combien de tours de boucle voulez-vous ? "))
+nb_tours = int(input("Combien de vidéo télécharger ?"))
 liste_url = []
 num_url = 1
 
 for i in range(nb_tours):
-    url = input("Entrez l'URL n°{} : ".format(num_url))
+    url = input("Entrez l'URL n°{} : ")
     liste_url.append(url)
     num_url = num_url + 1
 
